@@ -8,10 +8,17 @@ command and then choose the number of a recent command to execute by starting wi
 
 2) What are the relative advantages of installing MySQL using the package,
  directory archive (tarball or "no-install", or compiled methods?
+The methods vary in the amount of customization you can do to your specific installation. Compiled methods allow more contol
+but take more time and expertise to install.  Packages have everything you need but are not as customizable and may have slower
+performance.
 
 3) How do you verify the integrity of downloaded packages?
 
+Using checksum using MD5.
+
 4) How do you add the MySQL bin directory to the operating system path?
+Edit/create the .bashrc shell file with a path line.
+
 
 Additional Exercises (not in the book): 
 1) Document how you installed MySQL and any issues you came across with installation. 

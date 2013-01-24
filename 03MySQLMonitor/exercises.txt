@@ -1,9 +1,62 @@
 1. What do we mean when we say that MySQL has a client-server architecture?
 
+The clients connect to the server where the database resides.  There are many types of clients including mysql command line monitor and GUI interfaces. 
+
 2. Use the monitor help to look up information on the SELECT statement. (We’ll discuss SELECT in detail in Chapter 5.)
+
+
+"
+	mysql> help select
+Name: 'SELECT'
+Description:
+Syntax:
+SELECT
+    [ALL | DISTINCT | DISTINCTROW ]
+      [HIGH_PRIORITY]
+      [STRAIGHT_JOIN]
+      [SQL_SMALL_RESULT] [SQL_BIG_RESULT] [SQL_BUFFER_RESULT]
+      [SQL_CACHE | SQL_NO_CACHE] [SQL_CALC_FOUND_ROWS]
+    select_expr, ...
+    [FROM table_references
+    [WHERE where_condition]
+    [GROUP BY {col_name | expr | position}
+      [ASC | DESC], ... [WITH ROLLUP]]
+    [HAVING where_condition]
+    [ORDER BY {col_name | expr | position}
+      [ASC | DESC], ...]
+    [LIMIT {[offset,] row_count | row_count OFFSET offset}]
+    [PROCEDURE procedure_name(argument_list)]
+    [INTO OUTFILE 'file_name' export_options
+      | INTO DUMPFILE 'file_name']
+    [FOR UPDATE | LOCK IN SHARE MODE]]
+
+SELECT is used to retrieve rows selected from one or more tables, and
+can include UNION statements and subqueries. See [union], and
+[subqueries].
+
+The most commonly used clauses of SELECT statements are these:
+
+o Each select_expr indicates a column that you want to retrieve. There
+  must be at least one select_expr.
+
+o table_references indicates the table or tables from which to retrieve
+  rows. Its syntax is described in [join].
+"
+
+
+
 
 3. What is the difference between using the monitor in interactive mode and using
 the monitor in batch mode?
 
+While in interactive mode the monitor will execute a command after you type and display the results.  While using batch mode a list of commands will be read by the monitor and they will all be executed.  Batch mode is useful for running long lists of commands.
+
+
 4. What do the monitor user, password, and database options do?
+
+User - This is the user name used to connect to the MySQL server and is passed as an option while connecting to the server.
+
+Password - Is a security feature limiting access to the MySQL server.  A password can be passed as an option while connecting to the MySQL server.
+
+Database - Is an optional parameter that can be passed to the MySQL server when connecting instructing the monitor to use the indicated database.
 
